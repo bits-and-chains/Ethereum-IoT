@@ -1,8 +1,8 @@
 # Ethereum IoT: Creating a Private Blockchain on a Raspberry Pi
 
-Background: A blockchain is a digital ledger where immutable transactions take place. Blockchains are already used in finance as a way to keep track of transactions. Cryptocurrencies like bitcoin is built on top of a blockchain.
+Background: A blockchain is a digital ledger where immutable transactions take place. Blockchains are already used in finance as a way to keep track of transactions. Cryptocurrencies like bitcoin are built on top of a blockchain.
 
-Since records committed records can't be tampered with or destroyed, many other use cases of the blockchain are being explored. In the Internet of Things Space, blockchains can be used to 
+Since committed records can't be tampered with or destroyed, many people and research teams are exploring other uses for blockchains. In the Internet of Things Space, blockchains can be used to 
 
 * [Create an efficient energy grid](https://www.technologyreview.com/s/604227/blockchain-is-helping-to-build-a-new-kind-of-energy-grid/)
 
@@ -30,7 +30,7 @@ $ cargo install --git https://github.com/ethcore/parity.git parity
 
 ## Quickly Configure Blockchain
 
-Ethereum blockchains are composed of a consensus engine, a name, and a genesis block. The genesis block, as the name suggests, is the first block in your blockchain. All of these components are stored in a genesis file. Below is a bare bones genesis file to bootstrap your private chain. If you want to learn more about consensus engines and other chain parameters, you can head over to [Parity's docs](https://github.com/paritytech/parity/wiki/Chain-specification)
+The most basic components of an Ethereum blockchain is a consensus engine, a name, and a genesis block. The genesis block, as the name suggests, is the first block in your blockchain. All of these components are stored in a genesis file. Below is a bare bones genesis file to bootstrap your private chain. If you want to learn more about consensus engines and other chain parameters, you can head over to [Parity's docs](https://github.com/paritytech/parity/wiki/Chain-specification)
 
 ```
 {
@@ -82,3 +82,7 @@ Ethereum blockchains are composed of a consensus engine, a name, and a genesis b
 In order to get your private blockchain up and running, type parity and pass in the myGenesis.json file as the parameter.
 
 `parity --chain myGenesis.json`
+
+If all goes well you should be greeted by the Parity browser!
+
+![screen shot 2017-05-16 at 8 58 02 pm](https://cloud.githubusercontent.com/assets/1463964/26184118/e6c5ebb6-3b50-11e7-8269-539e38bd6fa1.png)
