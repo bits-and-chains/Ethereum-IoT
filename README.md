@@ -1,8 +1,8 @@
 # Ethereum IoT: Creating a Private Blockchain on a Raspberry Pi
 
-Background: A blockchain is a digital ledger where immutable transactions take place. Blockchains are already used in finance as a way to keep track of transactions. Cryptocurrencies like bitcoin are built on top of a blockchain.
+Background: A blockchain is a digital ledger where immutable transactions take place. Blockchains are already used in finance as a way to keep track of transactions. Cryptocurrencies, like bitcoin, are built on top of a blockchain.
 
-Since committed records can't be tampered with or destroyed, many people and research teams are exploring other uses for blockchains. In the Internet of Things Space, blockchains can be used to 
+Since committed records can't be tampered with or destroyed, many people and research teams are exploring other uses for blockchains. In the Internet of Things space, blockchains can be used to 
 
 * [Create an efficient energy grid](https://www.technologyreview.com/s/604227/blockchain-is-helping-to-build-a-new-kind-of-energy-grid/)
 
@@ -17,10 +17,13 @@ Since committed records can't be tampered with or destroyed, many people and res
 
 [Parity](https://parity.io/) is the rust client for Ethereum. Parity comes with a rich toolset to help developers interact and build upon the Ethereum blockchain.
 
+## Raspberry Pi
+
+This tutorial assumes that you have access to a Raspberry Pi 3, a monitor, keyboard and mouse with [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) installed. Setting your Raspberry Pi is beyond scope, but you can go [here](http://lifehacker.com/the-always-up-to-date-guide-to-setting-up-your-raspberr-1781419054), and [here](https://www.raspberrypi.org/documentation/setup/) for further instructions. 
 
 ## Install Parity on Raspberry Pi
 
-In order to interact with the Ethereum blockchain you will have to compile Parity onto your Raspberry pi. 
+In order to interact with the Ethereum blockchain, you will have to compile Parity onto your Raspberry pi. 
 
 ```
 $ curl https://sh.rustup.rs -sSf | sh
@@ -30,7 +33,7 @@ $ cargo install --git https://github.com/ethcore/parity.git parity
 
 ## Quickly Configure Blockchain
 
-The most basic components of an Ethereum blockchain is a consensus engine, a name, and a genesis block. The genesis block, as the name suggests, is the first block in your blockchain. All of these components are stored in a genesis file. Below is a bare bones genesis file to bootstrap your private chain. If you want to learn more about consensus engines and other chain parameters, you can head over to [Parity's docs](https://github.com/paritytech/parity/wiki/Chain-specification)
+The most basic components of an Ethereum blockchain is a consensus engine, a name, and a genesis block. The genesis block, as the name suggests, is the first block in your blockchain. All of these components are stored in a genesis file. Below is a bare bones genesis file to bootstrap your private chain. If you want to learn more about consensus engines and other chain parameters, you can head over to [Parity's docs](https://github.com/paritytech/parity/wiki/Chain-specification).
 
 ```
 {
